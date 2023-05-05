@@ -157,7 +157,7 @@ public:
             if ((mParticles[i].pos.y <= bagPos.y + 0.25) && (mParticles[i].pos.y >= bagPos.y - 0.25) && (mParticles[i].pos.x <= bagPos.x + 0.25) && (mParticles[i].pos.x >= bagPos.x - 0.25) && !mParticles[i].counted) {
                 mParticles[i].color = vec4(1, 0, 0, 0);
                 mParticles[i].counted = true;
-                while (points != 20) {
+                if (points != 20) {
                     points--;
                     if (points < 0) {
                         points = 0;
@@ -196,11 +196,11 @@ public:
         position.x = clamp(agl::randomUnitCube().x * 3.0f, -3.0f, 3.0f);
         position.y = 3.0f;
 
-        if (glfwGetTime() - createTimeC >= 2) {
+        if (glfwGetTime() - createTimeC >= 1.5) {
             createCoins(1);
             createTimeC = glfwGetTime();
         }
-        if (glfwGetTime() - createTimeT >= 2.5) {
+        if (glfwGetTime() - createTimeT >= 2) {
             createTaxes(1);
             createTimeT = glfwGetTime();
         }
@@ -219,7 +219,7 @@ public:
         renderer.sprite(bagPos, bagColor, 1.2, 0);
         renderer.texture("image", "name");
         renderer.sprite(vec3(0.1, 2.5, 0), vec4(1), 1, 0);
-        if (points == 5) {
+        if (points == 20) {
             renderer.texture("image", "win");
             renderer.sprite(vec3(0, 0, 0), vec4(1), 6, 0);
         }
