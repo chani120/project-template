@@ -3,6 +3,8 @@
 #include <chrono>
 #include <vector>
 #include "agl/window.h"
+#include <chrono>
+#include <thread>
 
 
 using namespace std;
@@ -190,7 +192,18 @@ public:
         }
     }
 
+    void restartGame() {
+        mParticles.clear();
+        mCoins.clear();
+        points = 0;
+    }
+
     void draw() {
+        if (won) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+            restartGame();
+            won = false;
+        }
 
         renderer.beginShader("sprite");
         position.x = clamp(agl::randomUnitCube().x * 3.0f, -3.0f, 3.0f);
@@ -222,6 +235,7 @@ public:
         if (points == 20) {
             renderer.texture("image", "win");
             renderer.sprite(vec3(0, 0, 0), vec4(1), 6, 0);
+            won = true;
         }
         renderer.endShader();
     }
@@ -239,6 +253,7 @@ protected:
     vec3 bagPos = vec3(0, -1, 0);
     vec4 bagColor = vec4(1);
     int points = 0;
+    bool won = false;
 
     void drawScore(int s) {
         if (s < 21) {
