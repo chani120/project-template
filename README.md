@@ -1,8 +1,8 @@
-# YOUR PROJECT TITLE HERE
+# "Tax Evasion" Game
 
-TODO: Replace "TODO" messages with your own text
-TODO: Add a description of your project here
-TODO: Add a representative image for your project here
+### My "Tax Evasion" project is a video game where the goal is to catch coinsand avoid collecting taxes. The user clicks the right and left keys to move the money collect bag, located at the bottom of the screen, to catch the coins as the fall avoiding the taxes. Each coin is a point and each tax is -1. The user wins when they reach 20 points and then the game restarts. 
+
+<img width="447" alt="Screenshot 2023-05-11 204701" src="https://github.com/chani120/project-template/assets/44120884/10f8070a-ff3d-4ec5-baa6-e0792dfbab78">
 
 ## How to build
 
@@ -42,11 +42,9 @@ project-template/build $ ../bin/demo
 ```
 
 
-## Demo of basic features
+## Demo of Game
 
-TODO: Document the main demos your viewer 
+[screen-capture (21).webm](https://github.com/chani120/project-template/assets/44120884/8eb294d3-8c1b-46b4-9156-c9846c103f6e)
 
-## Unique features 
 
-TODO: Show the unique features you made
 
