@@ -1,6 +1,6 @@
 # "Tax Evasion" Game
 
-#### My "Tax Evasion" project is a video game where the goal is to catch coins and avoid collecting taxes. The user clicks the right and left keys to move the money collection bag, located at the bottom of the screen, to catch the coins as the fall avoiding the taxes. Each coin is a point and each tax is -1. The user wins when they reach 20 points and then the game restarts. 
+#### My "Tax Evasion" project is a video game where the goal is to catch coins and avoid collecting taxes. The user clicks the right and left keys to move the money collection bag, located at the bottom of the screen, to catch the coins as they fall while avoiding the taxes. Each coin is a point and each tax is -1. The user wins when they reach 20 points and then the game restarts. 
 
 <img width="447" alt="Screenshot 2023-05-11 204701" src="https://github.com/chani120/project-template/assets/44120884/10f8070a-ff3d-4ec5-baa6-e0792dfbab78">
 
